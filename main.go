@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"fmt"
-	"log"
 	"net/http"
 	"os"
 
@@ -34,7 +33,7 @@ func run() error {
 
 	routes.RegisterUserRoutes(pgConn, r)
 
-	log.Println("Сервер запущен на :3000")
+	//log.Println("Сервер запущен на :3000")
 	ok := http.ListenAndServe(":3000", r)
 	return ok
 }

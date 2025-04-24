@@ -20,7 +20,7 @@ func main() {
 }
 
 func run() error {
-	pgConn, err := pgx.Connect(context.Background(), "postgres://postgres:daemon@172.19.0.2:5432/testdb")
+	pgConn, err := pgx.Connect(context.Background(), "postgres://postgres:daemon@mypg:5432/apollo84")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Unable to connect to database: %v\n", err)
 		os.Exit(1)
